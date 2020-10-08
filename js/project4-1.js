@@ -11,5 +11,4 @@ number2 = parseFloat(number2);
 let sum = number1 + number2;
 
 // OUTPUT
-document.getElementById("output").textContent = "The sum is " + sum;
-}
+document.getElementById("output").textContent = "The sum is " + sum + "!";
