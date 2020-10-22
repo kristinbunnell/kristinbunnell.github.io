@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacking Boxes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Week 5 - Exam Part 2</h1>
+        <h2>Stacking Boxes</h2>
+    </header>
+    <main>
+        <h3>How Many Stacks?</h3>
+        <label>Total Number Of Boxes: <input type="text" id="number1"></label>
+      <label>Boxes In Each Stack: <input type="text" id="number2"></label>
+        <label><button type="button" onclick="divideNumbers()">Divide Numbers</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+    function divideNumbers(){
+// INPUT
+let number1 = document.getElementById("number1").value;
+let number2 = document.getElementById("number2").value;
+
+// PROCESSING
+// convert the input strings to numbers by using parseInt;
+number1 = parseInt(number1);
+number2 = parseInt(number2);
+//divide the number of boxes by the number of stacks and store in my output variable;
+let sum = number1 / number2;
+
+// OUTPUT
+document.getElementById("output").innerHTML = sum;
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT 160 TEMPLATE - KRISTIN BUNNELL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Week 6: Select Shoes</h1>
+        <h2>Kristin Bunnell</h2>
+    </header>
+    <main>
+        <h3>Footwear</h3>
+        <label>
+            <select name="weather" id="weather">
+            <option value="disabled selected">--Select the weather--</option>
+            <option value="hot">Hot</option>
+            <option value="rain">Rain</option>
+            <option value="snow">Snow</option>
+            <option value="unknown">Unknown</option>
+        </select>
+    </label>
+        <label><button type="button" onclick="getShoes()">Get Footwear</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        <script>
+            function getFootwear(){
+                let footwear;
+                //input combo from weather box
+                let weather = document.getElementById("weather").value;
+                //processing
+                if (weather === "hot") {
+                    footwear = "sandals";
+                } else if (weather === "rain") {
+                            footwear = "galoshes";
+                } else if (weather === "snow") {
+                            footwear = "boots";
+                } else if (weather === "unknown") {
+                            footwear = "shoes";
+                }
+                //ouput
+                document.getElementById("output").innerHTML = "footwear";
+            }
+        </script>
+        &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+</body>
+</html>

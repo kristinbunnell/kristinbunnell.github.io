@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT 160: Exam 1: Part 2 - KRISTIN BUNNELL</title>
+</head>
+
+<body>
+    <header>
+        <h1>Calculate Pay</h1>
+    </header>
+    <main>
+        <h3>After Taxes</h3>
+        <label>Enter Regular Hours: <input type="text" id="regHours"></label>
+        <label>Enter Overtime Hours: <input type="text" id="otHours"></label>
+        <label><button type="button" onclick="employeePay()">Convert Numbers</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+    <script>
+        function addNumbers() {
+            // INPUT
+            let regHours = document.getElementById("regHours").value;
+            let otHours = document.getElementById("otHours").value;
+
+            // PROCESSING
+            // convert the input strings to numbers by using parseFloat;
+            regHours = parseFloat(regHours);
+            otHours = parseFloat(otHours);
+            //add regHours and otHours together to create gross, calculate tax, then subtract gross hours and tax, and store in my output variable;
+            let gross = regHours + otHours;
+            let tax = gross * 0.15
+            let employeePay = gross - tax;
+
+            // OUTPUT
+            document.getElementById("output").innerHTML = "The sum of " + gross + " and " - tax - " and " equals " employeePay "!";
+        }
+    </script>
+
+</body>
+
+</html>

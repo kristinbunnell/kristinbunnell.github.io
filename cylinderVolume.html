@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT 160: Exam 1 - Part 2</title>
+</head>
+
+<body>
+    <header>
+        <h1>Volume Of A Cylinder</h1>
+    </header>
+    <main>
+        <label>Radius <input type="text" id="radiusInput"></label>
+        <label>Height <input type="text" id="heightInput"></label>
+        <label><button type="button" onclick="volume()">Volume</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+
+    <script>
+        //  INPUT radius and height of the cylinder from user
+        function volume() {
+            let r = parseFloat(document.getElementById('radiusInput').value);
+            let h = parseFloat(document.getElementById('heightInput').value);
+            //  PROCESSING calculate the volume of the cylinder
+            let v = Math.PI * r * r * h;
+            //  OUTPUT display the volume of the cylinder
+            document.getElementById('outputDiv').innerHTML = v;
+        }
+    </script>
+
+</body>
+
+</html>

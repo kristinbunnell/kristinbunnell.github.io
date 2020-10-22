@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarts To Liters</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Converting Quarts To Liters</h1>
+        <h2>Week 5 - Exam Part 2</h2>
+    </header>
+    <main>
+        <h3>Quarts To Liters</h3>
+        <label>Enter Amount In Quarts: <input type="text" id="quarts"></label>
+        <label><button type="button" onclick="quartsToLiters()">Convert Numbers</button></label>
+        <hr>
+        <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+    <script>
+        function quartsToLiters() {
+    //  INPUT VALUE
+    let quarts = parseFloat(document.getElementById("quarts").value);
+    //  PROCESSING
+    //  converting from quarts to liters
+    let liters = quarts * 1.05669;
+    //  OUTPUT
+    document.getElementById("output").innerHTML = liters.toFixed(2) + "Liters";
+}
+    </script>
+
+</body>
+
+</html>
