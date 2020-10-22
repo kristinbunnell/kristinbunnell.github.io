@@ -1,8 +1,8 @@
 
 function getFootwear(){
-    //input combo from weather box
+    // input combo from weather box
     let x=(document.getElementById("weather").value);
-    //processing
+    // processing types of shoe for each type of weather
     if (x=="hot") {footwear= "Sandals";
 }
     if (x=="rain") {footwear= "Galoshes";
@@ -11,6 +11,6 @@ function getFootwear(){
 }
     if (x=="unknown") {footwear= "Shoes";
 }
-    //ouput
+    // ouput determine proper shoe to assign
     document.getElementById("output").innerHTML = footwear;
 }
