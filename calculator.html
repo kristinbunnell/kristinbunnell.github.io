@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIT 160 TEMPLATE - KRISTIN BUNNELL</title>
+    <title>Simple Calculator</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Test Your Math Skills!</h1>
-    <table border="1" cellpadding="5" cellspacing="5" width="600">
-    <tr align="center">
-    <td>First number</td>
-    <td>Second Number</td>
-    <td>Result</td>
-    </tr>
-    <tr align="center">
-    <td><input name="a" type="text" size=10 id='a'/></td>
-    <td><input name="b" type="text" size=10 id='b'/></td>
-    <td> <input type="text" id='result' readonly ></td>
-    </tr>
-    <tr>
-    <td colspan="3">
-    <button onclick="showresult('1')">+</button>
-    <button onclick="showresult('2')">-</button>
-    <button onclick="showresult('3')">*</button>
-    <button onclick="showresult('4')">/</button>
-    </td>
-    </tr>
-    
-    </table>
+    <main>
+        <h3>Here's how it works:</h3>
+        <ul>
+            <li>Box 1: Enter number</li>
+            <li>Box 2: Select operator</li>
+            <li>Box 3: Enter number</li>
+            <li>Box 4: Enter your answer</li>
+            <li>Box 5: Check your answer</li>
+        </ul>
+        <label><input type="text" id="number1" size="3"></label>
+        <select name="operators" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            </select>
+            <label><input type="text" id="number2" size="3"></label>
+            <label> = <input type="text" id="myanswer" size="3"></label>
+            <label><button type="button" onclick="calculator()">Check your answer</button></label>
+            <hr>
+            <p><span id="output">You are correct!</span></p>
+            <hr>
+    </main>
 </body>
-
+<script src="js/calculator.js"></script>
     <footer>
         &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
     </footer>
