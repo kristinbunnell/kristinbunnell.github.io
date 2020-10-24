@@ -4,9 +4,9 @@ function calculator() {
     // user inputs operator
     // user inputs second number
     let num1 = parseFloat(document.getElementById('number1').value);
+    let operator = (document.getElementById('operator').value);
     let num2= parseFloat(document.getElementById('number2').value);
     let myans = parseFloat(document.getElementById('myanswer').value);
-    let operator = (document.getElementById('operator').value);
 
     // PROCESSING
     // calculate the proplem
