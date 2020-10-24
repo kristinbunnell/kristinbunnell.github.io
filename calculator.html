@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Calculator</title>
 </head>
+
+<header>
+	<h1>Week 6: Let's Have Fun with Math!</h1>
+</header>
+
 <body>
-    <main>
         <h3>Here's how it works:</h3>
+        <hr>
         <ul>
             <li>Box 1: Enter number</li>
             <li>Box 2: Select operator</li>
@@ -23,15 +29,16 @@
             <option value="*">*</option>
             <option value="/">/</option>
             </select>
-            <label><input type="text" id="number2" size="3"></label>
-            <label> = <input type="text" id="myanswer" size="3"></label>
-            <label><button type="button" onclick="calculator()">Check your answer</button></label>
+        <label><input type="text" id="number2" size="3"></label>
+        <label> = <input type="text" id="myanswer" size="3"></label>
+        <label><button type="button" onclick="calculator()">Check your answer</button></label>
             <hr>
-            <p><span id="output">You are correct!</span></p>
+            <p><span id='output'></span></p>
             <hr>
-    </main>
 </body>
+
 <script src="js/calculator.js"></script>
+
     <footer>
         &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
     </footer>
