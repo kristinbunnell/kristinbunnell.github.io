@@ -1,16 +1,16 @@
 // INPUT
 //get day of week
-let dayofWeek = new Date();
 //ask for input - subtotal
-let subtotal = parseFloat(document.getElementById('subtotal').value);
-let newsubtotal
+let dayofWeek = new Date();
+let purchaseAmount = parseFloat(document.getElementById('purchaseAmount').value);
+let discountAmount
 let finaltotal
 // PROCESSING
 function total(){
     //is subtotal greater than $50 and Tuesday or Wednesday?
     //if so, subtract $50
-    if (subtotal >= 50 && dayofWeek == 2 || dayofWeek == 3) {
-        newsubtotal = (subtotal * 0.9);
+    if (purchaseAmount >= 50 && dayofWeek == 2 || dayofWeek == 3) {
+        discountAmount = (subtotal * 0.9);
     }
     else {
         newsubtotal = (subtotal);
