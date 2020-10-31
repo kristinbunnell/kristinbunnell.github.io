@@ -14,7 +14,7 @@
     <main>
         <input id="price">Price
         <br><br>
-        <input id="discount">%
+        <input id="dayofWeek">Day of Week
         <br><br>
         <button onclick="getPrice()">
     Get total
@@ -26,10 +26,11 @@
         &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
     </footer>
     <script>
+        let dayofWeek = new Date();    
         getPrice = function() {
-            var numVal1 = Number(document.getElementById("price").value);
-            var numVal2 = Number(document.getElementById("discount").value) / 100;
-            var totalValue = numVal1 - (numVal1 * numVal2)(*1.06)
+            let numVal1 = parseFloat(document.getElementById("price").value);
+            let numVal2 = parseFloat(document.getElementById("dayofWeek").value);
+            let totalValue = (numVal1 - (numVal1 *.90)(*1.06)
             document.getElementById("total").value = totalValue.toFixed(2);
         }
     </script>
