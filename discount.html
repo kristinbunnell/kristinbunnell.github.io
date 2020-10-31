@@ -12,20 +12,26 @@
         <h2>Let's Find Out!</h2>
     </header>
     <main>
-        <input id = 'dayofWeek'>Day of Week
+        <input id="price">Price
         <br><br>
-        <input id = 'purchaseAmount'>Purchase Price
+        <input id="discount">%
         <br><br>
-        <input id = 'discountAmount'>Discount
+        <button onclick="getPrice()">
+    Get total
+    </button>
         <br><br>
-        <label></label><button type="button" onclick="getPrice()">
-    Total Amount Due</button></label>
-    <br><br>
-        <hr>
-        <p><span id="output"></span></p>
+        <input readonly id="total">
     </main>
     <footer>
         &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
     </footer>
+    <script>
+        getPrice = function() {
+            var numVal1 = Number(document.getElementById("price").value);
+            var numVal2 = Number(document.getElementById("discount").value) / 100;
+            var totalValue = numVal1 - (numVal1 * numVal2)(*1.06)
+            document.getElementById("total").value = totalValue.toFixed(2);
+        }
+    </script>
 </body>
 </html>
