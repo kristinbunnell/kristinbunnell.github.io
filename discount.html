@@ -27,6 +27,12 @@
     </footer>
     <script>
         let dayofWeek = new Date();    
+        if (dayofWeek == 2 || dayofWeek == 3){
+            let discount = numVal1 * 0.90)
+        }
+        else {
+            let discount = 0
+            } 
         getPrice = function() {
             let numVal1 = parseFloat(document.getElementById("price").value);
             let numVal2 = parseFloat(document.getElementById("dayofWeek").value);
