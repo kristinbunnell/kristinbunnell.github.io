@@ -18,5 +18,5 @@ function showMessage() {
     else {
      message = 'Get Up!';
     }
-    document.getElementById('output').innerHTML = myAlarm;
+    document.getElementById('output').innerHTML = message;
   }
