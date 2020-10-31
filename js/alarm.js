@@ -1,22 +1,21 @@
 function showMessage() {
+  // INPUTS
     let now = new Date();
     let month = now.getMonth();
     let dayofMonth = now.getDate();
     let dayofWeek = now.getDay();
-    if (month == 1 && dayofMonth == 1) {
+    // PROCESSING
+    // check if it is a holiday
+    if (month == 0 && dayofMonth == 1) || (month == 6 && dayofMonth == 4) || (month == 12 && dayofMonth == 25) {
       message = 'Sleep In!'
     }
-    if (month == 7 && dayofMonth == 4) {
-    message = 'Sleep In!'
-    }
-    if (month == 12 && dayofMonth == 25) {
-      message = 'Sleep In!'
-    }
-    else if (dayofWeek == 6 || dayofWeek == 7) {
+    // check if it is a weekday
+    if (dayofWeek == 6 || dayofWeek == 0) {
       message = 'Sleep In!';
     }
     else {
      message = 'Get Up!';
     }
+    //OUTPUTS
     document.getElementById('output').innerHTML = message;
   }
