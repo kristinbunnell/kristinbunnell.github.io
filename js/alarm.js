@@ -10,7 +10,7 @@ function showMessage() {
       message = 'Sleep In!'
     }
     // check if it is a weekday
-    if (dayofWeek == 6 || dayofWeek == 0) {
+    if (dayofWeek == 0 || dayofWeek == 1) {
       message = 'Sleep In!';
     }
     else {
