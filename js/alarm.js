@@ -19,3 +19,4 @@ function showMessage() {
     //OUTPUTS
     document.getElementById('output').innerHTML = message;
   }
+  showMessage(); 
