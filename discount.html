@@ -14,27 +14,26 @@
         <h2>Let's Find Out!</h2>
     </header>
     <main>
-        <label>Price<input type="text" id="price"></label>
-        <br><br>
-        <label><button type="button" onclick="getPrice()></button>
-        <br><br>
-        <input readonly id= "getDay()></button></label>
+        <label>Purchase Amount: <input type="text" id="purchase"></label>
+        <label><button onclick="discount()">Calculate</button></label>
+        <hr>
+        <p><span id="output"></span></p>
     </main>
     <footer>
         &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
     </footer>
     <script>
-        function getPrice(){
-            let dayofWeek = new Date();
-            dayofWeek.getDay()
-            if ((dayofWeek.getDay() == 2) || (dayofWeek.getDay() == 3) && (numVal1 * .50) 
-                let totalValue = numVal1 * .9
-            }
-            let numVal1 = parseFloat(document.getElementById("price").value);
-            let totalValue = (numVal1 * 1.06)
-            document.getElementById("total").innerHTML = getPrice;
+        function getPrice() {
+            let dayofWeek = new Date().getDay();
+            let purchase = parseFloat(document.getElementById("purchase").value);
+            if ((dayofWeek.getDay() == 2) || (dayofWeek.getDay() == 3) && (purchase * .50) 
+            let discount = purchase * .9;
+            let price = purchase * 1.06;
+            document.getElementById("output").innerHTML = 'Your total price is $';
         }
     </script>
 </body>
 
 </html>
+
+
