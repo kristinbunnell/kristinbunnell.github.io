@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CIT 160 Discount Activity</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <h1>Does Your Purchase Qualify for a Discount?</h1>
         <h2>Let's Find Out!</h2>
     </header>
     <main>
-        <input id="price">Price
-        <br><br>
-        <input id="dayofWeek">Day of Week
+        <label>Price<input type="text" id="price"></label>
         <br><br>
         <button onclick="getPrice()">
-    Get total
-    </button>
+            Get total
+        </button>
         <br><br>
         <input readonly id="total">
     </main>
@@ -26,19 +26,17 @@
         &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
     </footer>
     <script>
-        let dayofWeek = new Date();    
-        if (today == Tuesday || today == Wednesday){
-            let discount = numVal1 * 0.90)
-        }
-        else {
-            let discount = 0
-            } 
-        getPrice = function() {
+        function = getPrice(){
+            let dayofWeek = new Date();
+            dayofWeek.getDay()
+            if ((dayofWeek.getDay() == 2) || (dayofWeek.getDay() == 3) && numVal1. 50) {
+                let totalValue = numVal1 * .9
+            }
             let numVal1 = parseFloat(document.getElementById("price").value);
-            let numVal2 = parseFloat(document.getElementById("dayofWeek").value);
-            let totalValue = (numVal1 - (numVal1 *.90)(*1.06)
-            document.getElementById("total").value = totalValue.toFixed(2);
+            let totalValue = (numVal1 * 1.06)
+            document.getElementById("total").innerHTML = totalValue;
         }
     </script>
 </body>
+
 </html>
