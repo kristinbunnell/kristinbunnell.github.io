@@ -1,4 +1,4 @@
-function showMessage() {
+function myAlarm() {
   // INPUTS
     let now = new Date();
     let month = now.getMonth();
@@ -6,7 +6,7 @@ function showMessage() {
     let dayofWeek = now.getDay();
     // PROCESSING
     // check if it is a holiday
-    if (month == 0 && dayofMonth == 1) || (month == 6 && dayofMonth == 4) || (month == 12 && dayofMonth == 25) {
+    if ((month == 0 && dayofMonth == 1) || (month == 6 && dayofMonth == 4) || (month == 12 && dayofMonth == 25)) {
       message = 'Sleep In!';
     }
     // check if it is a weekday
@@ -19,4 +19,3 @@ function showMessage() {
     //OUTPUTS
     document.getElementById('output').innerHTML = message;
   }
-  showMessage(); 
