@@ -15,7 +15,7 @@
     </header>
     <main>
         <h3>Adding Odd Integers</h3>
-        <label>Enter a number and find the sum: <input type="text" id="uppervalue"></label>
+        <label>Enter a number and find the sum: <input type="text" id="upperValue"></label>
         <label><button type="button" onclick="addNumbers()">Add the Odd Numbers</button></label>
         <hr>
         <p><span id="output"></span></p>
@@ -24,17 +24,17 @@
         &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
     </footer>
     <script>
-        function runFunction() {
+        function addNumbers() {
+            let upperValue = parseFloat(document.getElementById('upperValue').value);
             // input - receive input from user
             let n = document.getElementById('uppervalue').value;
             let count;
             // processing
             for (let i = 1; i <= n; i++) {
-                if (i % 2 != 0) { console.log(i); }
-                i++;
+                if (i % 2 != 0) count += i;
             }
             // output - add up odd integers
-            document.getElementByID('output').innerHTML = "addnumbers";
+            document.getElementByID('output').innerHTML = count;
         }  
     </script>
 </body>
