@@ -28,13 +28,13 @@
             let upperValue = parseFloat(document.getElementById('upperValue').value);
             // input - receive input from user
             let n = document.getElementById('upperValue').value;
-            let count;
+            let sum;
             // processing
             for (let i = 1; i <= n; i++) {
-                if (i % 2 != 0) count += i;
+                if (i % 2 != 0) sum += i;
             }
             // output - add up odd integers
-            document.getElementByID('output').innerHTML = count;
+            document.getElementByID('output').innerHTML = sum;
         }  
     </script>
 </body>
