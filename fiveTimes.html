@@ -16,7 +16,7 @@
     <main>
         <h3>Let's multiply through 12<h3>
             <hr>
-            <p><span id="answer"></span></p>
+            <p><span id="output"></span></p>
     </main>
     <footer>
         &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
@@ -24,14 +24,14 @@
     <script>
             // INPUT 
             let i;
-            let output = "";
+            let multiply = "";
             for (i = 1; i <= 12; i++) {
 
                 // PROCESSING
-                output += "5 x $(i) = $(i*5) <br>";
+                multiply += "5 x $(i) = $(i*5) <br>";
             }
             // OUTPUT
-            document.getElementById("answer").innerHTML = output;
+            document.getElementById("output").innerHTML = multiply;
     </script>
 </body>
 
