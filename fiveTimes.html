@@ -23,12 +23,11 @@
     </footer>
     <script>
             // INPUT 
-            let i;
             let multiply = "";
-            for (i = 1; i <= 12; i++) {
+            for (let i = 1; i <= 12; i++) {
 
                 // PROCESSING
-                multiply += "5 x ${i} = ${5*i} <br>";
+                multiply += `5 x ${i} = ${5*i} <br>`;
             }
             // OUTPUT
             document.getElementById("output").innerHTML = multiply;
