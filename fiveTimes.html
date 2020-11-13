@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT 160 TEMPLATE - KRISTIN BUNNELL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Week 9: Five Times Table</h1>
+        <h2>Kristin Bunnell</h2>
+    </header>
+    <main>
+        <h3>Let's multiply through 12/h3>
+            <hr>
+            <p><span id="output"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        function multiplyNumbers() {
+            // INPUT 
+            let i;
+            let output = "";
+            for (let i = 1; i<=12; i++) {
+
+                // PROCESSING
+                output += "5x" + i + "=" + i * 5 + "<br>";
+            }
+            // OUTPUT
+            document.getElementById("output").innerHTML = " ";
+        }
+    </script>
+</body>
+
+</html>
