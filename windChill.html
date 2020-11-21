@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT 160 TEMPLATE - KRISTIN BUNNELL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Week 10: Wind Chill</h1>
+        <h2>Kristin Bunnell</h2>
+    </header>
+    <main>
+        <h3>Let's Calculate the Wind Chill</h3>
+        <label>Air Temperature (ºF): <input type="text" id="tempF"></label>
+        <label>Wind Speed (MPH): <input type="text" id="windSpeed"></label>
+        <label><button type="button" onclick="windChill()">Wind Chill</button></label>
+        <hr>
+        <p><span id="output1"></span></p>
+        <p><span id="output2"></span></p>
+    </main>
+    <footer>
+        &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        //FIRST FUNCTION
+        function doInputOutput() {
+            // INPUT
+            let temp = parseInt(document.getElementById("tempF").value);
+            let speed = parseInt(document.getElementById("windSpeed").value);
+            let text = "";
+            let f;
+            // PROCESS
+            if (temp > 50)
+                text = "Temperature is too high to calculate.";
+            else if (speed < 3)
+                text = "Windspeed is too low to calculate.";
+            else {
+                f = windChill(temp, speed)
+            }
+            //Output
+            document.getElementById('output1').innerHTML = f;
+            document.getElementById('output2').innerHTML = text;
+        }
+        //SECOND FUNCTION
+        function windChill(tempF, speed) {
+            f = 35.74 + (0.6215 * temp) - (35.75 * speed ** 0.16) + (0.4275 * temp * speed ** 0.16)
+            return f;
+        }
+    </script>
+</body>
+
+</html>

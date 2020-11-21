@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Exam 2: Part 2 - Question 3</title>
+</head>
+
+<body>
+    <p>Please enter three numbers:</p>
+    <input type="text" id="start" size="5"><br>
+    <input type="text" id="end" size="5">
+    <input type="text" id="divisor" size="5">
+    <button type="button" onclick="">Click</button>
+    <div id=""></div>
+
+    <script>
+        //input: integers from user
+        //processing: determine what integers are evenly divisible
+        //output: integers with spaces in between
+        function divisibleInt() {
+            let start = parseInt(document.getElementById('start').value);
+            let end = parseInt(document.getElementById('end').value);
+            let divisor = parseInt(document.getElementById('divisor').value);
+            //count the number of integers that evenly divide between start and end
+            let evenInt = 0;
+            for (let divisor = 1; divisor <= start; divisor++) {
+                let evenInt = end % divisor;
+                if (divisor == 0) {
+                    evenInt++;
+                }
+            }
+            //determine the ouput and show it to the user
+            let output;
+            if (evenInt == divisor) {
+                output = divisor ('&nbsp');
+            }
+        }
+        document.getElementById('outputDiv').innerHTML = output;
+    </script>
+</body>
+
+</html>
