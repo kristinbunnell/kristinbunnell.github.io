@@ -15,7 +15,7 @@
     </header>
     <main>
         <h3>Let's Calculate the Wind Chill</h3>
-        <label>Air Temperature (ºF): <input type="text" id="tempF"></label>
+        <label>Air Temperature (ºF): <input type="text" id="temp"></label>
         <label>Wind Speed (MPH): <input type="text" id="speed"></label>
         <label><button type="button" onclick="doInputOutput()">Wind Chill</button></label>
         <hr>
@@ -29,13 +29,14 @@
         //FIRST FUNCTION
         function doInputOutput() {
             // INPUT
-            let temp = parseInt(document.getElementById("tempF").value);
+            let temp = parseInt(document.getElementById("temp").value);
             let speed = parseInt(document.getElementById("speed").value);
             let text = "";
             let f;
             // PROCESS
-            if (temp > 50)
+            if (temp > 50) {
                 text = "Temperature is too high to calculate.";
+        }
             else if (speed < 3)
                 text = "Windspeed is too low to calculate.";
             else {
@@ -46,7 +47,7 @@
             document.getElementById('output2').innerHTML = text;
         }
         //SECOND FUNCTION
-        function windChill(tempF, speed) {
+        function windChill(temp, speed) {
             f = 35.74 + (0.6215 * temp) - (35.75 * speed ** 0.16) + (0.4275 * temp * speed ** 0.16)
             return f;
         }
