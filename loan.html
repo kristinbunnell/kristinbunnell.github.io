@@ -61,7 +61,7 @@
             return "$" + paymentAmount.toFixed(2);
         }
         function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentPaidToDate) {
-            balanceAmount = principal * Math.pow((1 + (annualRate / periodsPerYear)), numberOfPaymentPaidToDate) - (((principal * (annualRate / periodsPerYear)) / (1 - Math.pow((1 + (annualRate / periodsPerYear)), -(years * periodsPerYear))) * (Math.pow(1 + (annualRate / periodsPerYear), numberOfPaymentPaidToDate) - 1)) / (annualRate / periodsPerYear))
+            balanceAmount = principal * Math.pow((1 + (annualRate / periodsPerYear)), numberOfPaymentPaidToDate) - (((principal * (annualRate / periodsPerYear)) / (1 - Math.pow((1 + (annualRate / periodsPerYear)), - (years * periodsPerYear))) * (Math.pow(1 + (annualRate / periodsPerYear), numberOfPaymentPaidToDate) - 1)) / (annualRate / periodsPerYear))
             return "$" + balanceAmount.toFixed(2);
         }
     </script>
