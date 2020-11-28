@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT 160 TEMPLATE - KRISTIN BUNNELL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Week 11: Loan Calculator</h1>
+        <h2>Kristin Bunnell</h2>
+    </header>
+    <main>
+        <h3>Let's borrow some money!</h3>
+        <label>Amount Borrowed (principal): <input type="text" id="borrowed"></label>
+        <label>Annual Interest Rate (example 0.065): <input type="text" id="rate"></label>
+        <label>Number of Years: <input type="text" id="numYears"></label>
+        <label>Payments Per Year: <input type="text" id="pmtsPerYear"></label>
+        <label><button type="button" onclick="doPayment()">Compute Payment</button></label>
+        <hr>
+        <p><span id="output1"></span></p>
+        <label>Number of Payments Paid-to-Date: <input type="text" id="pmtsToDate"></label>
+        <label><button type="button" onclick="doBalance()">Compute Payoff Amount</button></label>
+        <p><span id="output2"></span></p>
+
+    </main>
+    <footer>
+        &copy;2020 &bull; Kristin Bunnell &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+    <script>
+        //INPUT (get input from user)
+        function doPayment() {
+            // INPUT
+            let borrowed = parseFloat(document.getElementById("borrowed").value);
+            let rate = parseFloat(document.getElementById("rate").value);
+            let numYears = parseFloat(document.getElementById("numYears").value);
+            let pmtsPerYear = parseFloat(document.getElementById("pmtsPerYear").value);
+            // PROCESS (call second function)
+            let result = computePayment(borrowed, rate, numYears, pmtsPerYear);
+            // OUTPUT (calculate result for the user)
+            document.getElementById('output1').innerHTML = result;
+        }
+        //SECOND FUNCTION 
+        function doBalance() {
+            // INPUT (get input from user)
+            let borrowed = parseFloat(document.getElementById("borrowed").value);
+            let rate = parseFloat(document.getElementById("rate").value);
+            let numYears = parseFloat(document.getElementById("numYears").value);
+            let pmtsPerYear = parseFloat(document.getElementById("pmtsPerYear").value);
+            let pmtsToDate = parseFloat(document.getElementById("pmtsToDate").value);
+            // PROCESSING (calls the function computeBalance)
+            let output = computeBalance(borrowed, rate, numYears, pmtsPerYear, pmtsToDate);
+            // OUTPUT (show result to user)
+            document.getElementbyId("Output2").innerHTML = output;
+        }
+        function computePayment(principal, annualRate, years, periodsPerYear) {
+            paymentAmount = (principal * (annualRate / periodsPerYear)) / (1 - Math.pow((1 + (annualRate / periodsPerYear)), -(years * periodsPerYear)));
+            return "$" + paymentAmount.toFixed(2);
+        }
+        function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentPaidToDate) {
+            balanceAmount = principal * Math.pow((1 + (annualRate / periodsPerYear)), numberOfPaymentPaidToDate) - (((principal * (annualRate / periodsPerYear)) / (1 - Math.pow((1 + (annualRate / periodsPerYear)), -(years * periodsPerYear))) * (Math.pow(1 + (annualRate / periodsPerYear), numberOfPaymentPaidToDate) - 1)) / (annualRate / periodsPerYear))
+            return "$" + balanceAmount.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
