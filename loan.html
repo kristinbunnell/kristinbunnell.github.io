@@ -20,8 +20,8 @@
         <label>Number of Years: <input type="text" id="numYears"></label>
         <label>Payments Per Year: <input type="text" id="pmtsPerYear"></label>
         <label><button type="button" onclick="doPayment()">Compute Payment</button></label>
-        <hr>
         <p><span id="output1"></span></p>
+        <hr>
         <label>Number of Payments Paid-to-Date: <input type="text" id="pmtsToDate"></label>
         <label><button type="button" onclick="doBalance()">Compute Payoff Amount</button></label>
         <p><span id="output2"></span></p>
@@ -54,7 +54,7 @@
             // PROCESSING (calls the function computeBalance)
             let output = computeBalance(borrowed, rate, numYears, pmtsPerYear, pmtsToDate);
             // OUTPUT (show result to user)
-            document.getElementbyId("Output2").innerHTML = output;
+            document.getElementbyId("output2").innerHTML = output;
         }
         function computePayment(principal, annualRate, years, periodsPerYear) {
             paymentAmount = (principal * (annualRate / periodsPerYear)) / (1 - Math.pow((1 + (annualRate / periodsPerYear)), -(years * periodsPerYear)));
