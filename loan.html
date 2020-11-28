@@ -54,7 +54,7 @@
             // PROCESSING (calls the function computeBalance)
             let output = computeBalance(borrowed, rate, numYears, pmtsPerYear, pmtsToDate);
             // OUTPUT (show result to user)
-            document.getElementbyId("output2").innerHTML = output;
+            document.getElementById("output2").innerHTML = output;
         }
         function computePayment(principal, annualRate, years, periodsPerYear) {
             paymentAmount = (principal * (annualRate / periodsPerYear)) / (1 - Math.pow((1 + (annualRate / periodsPerYear)), -(years * periodsPerYear)));
