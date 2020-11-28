@@ -8,8 +8,8 @@
   <p>Please enter two numbers:</p>
   <input type="text" id="one" size="5"><br>
   <input type="text" id="two" size="5">
-  <button type="button" onclick="">Click</button>
-  <div id=""></div>
+  <button type="button" onclick="checkSum">Click</button>
+  <div id="message"></div>
 
   <script>
       function checkSum(){
@@ -17,7 +17,7 @@
           let two = parseInt(document.getElementById('two').value);
 
           let message;
-          if (one && two > 5 || (one + two > 20)) {
+          if (one > 5 && two > 5 || (one + two > 20)) {
               message = 'true';
           }
           else {
